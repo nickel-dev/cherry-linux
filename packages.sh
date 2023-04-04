@@ -8,23 +8,19 @@ pacman -S doas
 touch /etc/doas.conf
 echo "permit :wheel" > /etc/doas.conf
 
-# aur helper yay
-mkdir git
-cd git
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
+# ly display manager
+git clone https://github.com/fairyglade/ly
+cd ly
+make install installsystemd
+systemctl enable ly.service
 cd ..
-rm -rf yay-bin
-cd ..
-rm -rf git
+rm -rf ly
 
 # xfce
 pacman -S xfce4
 
 # additionals
 pacman -S vim nano firefox gedit libreoffice krita neofetch htop vlc mpv yt-dlp python python-pip
-yay -S tor-browser
 
 # update
 pacman -Syyu
