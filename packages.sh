@@ -9,7 +9,7 @@ touch /etc/doas.conf
 echo "permit :wheel" > /etc/doas.conf
 
 # ly display manager
-git clone https://github.com/fairyglade/ly
+git clone https://github.com/fairyglade/ly --recursive
 cd ly
 make install installsystemd
 systemctl enable ly.service
