@@ -20,7 +20,7 @@ cd ..
 rm -rf ly
 
 # additionals
-pacman -S vim nano firefox gedit libreoffice krita neofetch htop vlc mpv yt-dlp python python-pip
+pacman -S vim nano firefox gedit krita neofetch htop vlc mpv yt-dlp python python-pip
 
 # update
 pacman -Syyu
